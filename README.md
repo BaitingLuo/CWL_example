@@ -39,7 +39,7 @@ cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR examp
 ```
 
 
-#Upload docker
+# Upload docker
 For others to execute your workflow, the docker built on local machine needs to be uploaded to dockerhub.
 ```
 docker login -u <your_docker_id> --password <your_docker_password>
