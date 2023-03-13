@@ -24,4 +24,6 @@ the containerized computing elements.
 To run the workflow, you need to give the following command:
 ```
 cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example1.cwl.json --FileInput ... 
+
+Replace ... with the dataset, which is a file. In our example, it is data/data.csv
 ```
