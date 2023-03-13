@@ -16,3 +16,6 @@ The repository contains examples of using CWL to build ML workflows
 **Data preprocessing**: the workflow constains an independent step of preprocessing data. In the example, target values are replaced with numerical targets. 
 
 # Build docker
+# Example 1
+git clone 
+docker build -t example1:latest .
