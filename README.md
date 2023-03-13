@@ -17,6 +17,23 @@ The repository contains examples of using CWL to build ML workflows
 
 # Build docker
 # Example 1
-'''https://github.com/BaitingLuo/CWL_example.git'''
+```
+https://github.com/BaitingLuo/CWL_example.git
 
 docker build -t example1:latest .
+
+cd example1
+
+cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example1.cwl.json --FileInput data/data.csv
+```
+
+# Example 2
+```
+https://github.com/BaitingLuo/CWL_example.git
+
+docker build -t example2:latest .
+
+cd example2
+
+cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example2.cwl.json --FileInput data/data.csv
+```
