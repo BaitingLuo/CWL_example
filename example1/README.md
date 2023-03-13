@@ -13,11 +13,11 @@ the containerized computing elements.
 ![alt text](example1.png?raw=true)
 
 ### Required inputs
- - FileInput : 
+ - FileInput : data/data.csv
 
 
 ### Generated outputs
- - FileOutput : 
+ - FileOutput : a text file contains classification accuracy.
 
 
 ## Execution
