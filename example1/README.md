@@ -10,7 +10,7 @@ the containerized computing elements.
 ## Description
 
 ### example1
-![alt text](https://github.com/BaitingLuo/CWL_example/blob/example1/example1.png?raw=true)
+![alt text](example1.png?raw=true)
 
 ### Required inputs
  - FileInput : 
