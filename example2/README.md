@@ -10,15 +10,16 @@ the containerized computing elements.
 ## Description
 
 ### example2
+![alt text](example2.png?raw=true)
 
 
 ### Required inputs
- - fetch_raw_data : 
+ - fetch_raw_data : a csv file. In this example, a subset of iris dataset is used.
 
 
 ### Generated outputs
- - RF_ouput : 
- - MLP_ouput : 
+ - RF_ouput : accuracy score
+ - MLP_ouput : accuracy score
 
 
 ## Execution
