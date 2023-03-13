@@ -17,5 +17,6 @@ The repository contains examples of using CWL to build ML workflows
 
 # Build docker
 # Example 1
-git clone 
+'''https://github.com/BaitingLuo/CWL_example.git'''
+
 docker build -t example1:latest .
