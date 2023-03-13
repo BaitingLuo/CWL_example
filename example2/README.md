@@ -14,7 +14,7 @@ the containerized computing elements.
 
 
 ### Required inputs
- - fetch_raw_data : a csv file. In this example, a subset of iris dataset is used.
+ - fetch_raw_data : data/data.csv; in this example, a subset of iris dataset is used.
 
 
 ### Generated outputs
@@ -25,5 +25,5 @@ the containerized computing elements.
 ## Execution
 To run the workflow, you need to give the following command:
 ```
-cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example2.cwl.json --fetch_raw_data ... 
+cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example2.cwl.json --fetch_raw_data data/data.csv 
 ```
