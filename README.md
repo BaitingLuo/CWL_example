@@ -37,3 +37,14 @@ cd example2
 
 cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example2.cwl.json --FileInput data/data.csv
 ```
+
+
+#Upload docker
+For others to execute your workflow, the docker built on local machine needs to be uploaded to dockerhub.
+```
+docker login -u <your_docker_id> --password <your_docker_password>
+
+docker build -t <your_docker_id>/<image_name>:<image_version> .
+
+docker push <your_docker_id>/<image_name>
+```
