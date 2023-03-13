@@ -4,7 +4,7 @@
   "requirements": {
     "InlineJavascriptRequirement": {},
     "DockerRequirement": {
-      "dockerImageId": "randomforest:latest"
+      "dockerImageId": "example1:latest"
     },
     "ShellCommandRequirement": {},
     "InitialWorkDirRequirement": {
