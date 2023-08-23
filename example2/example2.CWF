@@ -19,7 +19,7 @@
       "attributes": {
         "name": "MLP",
         "workdir": "/code",
-        "imageId": "example2:latest",
+        "imageId": "robert666666/example1",
         "command": "python neural_network.py"
       },
       "registry": {
@@ -75,7 +75,7 @@
       "attributes": {
         "name": "Random_Forest",
         "workdir": "/code",
-        "imageId": "example2:latest",
+        "imageId": "robert666666/example1",
         "command": "python RF.py"
       },
       "registry": {
@@ -131,7 +131,7 @@
       "attributes": {
         "name": "data_processing",
         "workdir": "/code",
-        "imageId": "example2:latest",
+        "imageId": "robert666666/example1",
         "command": "python clean_data.py"
       },
       "registry": {
