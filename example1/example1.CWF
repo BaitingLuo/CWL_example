@@ -19,7 +19,7 @@
       "attributes": {
         "name": "training",
         "workdir": "/code",
-        "imageId": "example1:latest",
+        "imageId": "robert666666/example1",
         "command": "python RF.py"
       },
       "registry": {
@@ -75,7 +75,7 @@
       "attributes": {
         "name": "data_processing",
         "workdir": "/code",
-        "imageId": "example1:latest",
+        "imageId": "robert666666/example1",
         "command": "python clean_data.py"
       },
       "registry": {
