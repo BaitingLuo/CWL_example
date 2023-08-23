@@ -4,7 +4,7 @@
   "requirements": {
     "InlineJavascriptRequirement": {},
     "DockerRequirement": {
-      "dockerImageId": "example2:latest"
+      "dockerImageId": "robert666666/example1"
     },
     "ShellCommandRequirement": {},
     "InitialWorkDirRequirement": {
