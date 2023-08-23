@@ -35,7 +35,7 @@ docker build -t example2:latest .
 
 cd example2
 
-cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example2.cwl.json --FileInput data/data.csv
+cwltool --no-match-user --no-read-only --preserve-environment LEAP_CLI_DIR example2.cwl.json --fetch_raw_data data/data.csv
 ```
 
 
