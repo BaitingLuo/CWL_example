@@ -1,0 +1,42 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "Workflow",
+  "inputs": {
+    "Raw_Data": "File"
+  },
+  "outputs": {
+    "Training_Results": {
+      "type": "File",
+      "outputSource": "Training/training_result"
+    },
+    "Model": {
+      "type": "File",
+      "outputSource": "Training/model"
+    }
+  },
+  "steps": {
+    "Training": {
+      "run": "96731c3e-8303-8418-c4e3-b36f5dc15bbc_step.cwl.json",
+      "in": {
+        "s": "Data_Processing/data_output"
+      },
+      "out": [
+        "training_result",
+        "model"
+      ]
+    },
+    "Data_Processing": {
+      "run": "4dcf97f8-c45b-9267-e168-2e4055a5612f_step.cwl.json",
+      "in": {
+        "f": "Raw_Data"
+      },
+      "out": [
+        "data_output"
+      ]
+    }
+  },
+  "requirements": {
+    "InlineJavascriptRequirement": {},
+    "SubworkflowFeatureRequirement": {}
+  }
+}

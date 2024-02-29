@@ -1,0 +1,3 @@
+Result from random forest:
+Out-of-bag score estimate: 1.000
+Mean accuracy score: 1.000

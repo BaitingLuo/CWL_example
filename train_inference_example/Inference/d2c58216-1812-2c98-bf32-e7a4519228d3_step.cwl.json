@@ -1,0 +1,54 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "CommandLineTool",
+  "requirements": {
+    "NetworkAccess": {
+      "networkAccess": true
+    },
+    "InlineJavascriptRequirement": {},
+    "DockerRequirement": {
+      "dockerImageId": "train_test:latest"
+    },
+    "ShellCommandRequirement": {},
+    "InitialWorkDirRequirement": {
+      "listing": [
+        {
+          "entry": "$(inputs['Model'])",
+          "writable": true
+        },
+        {
+          "entry": "$(inputs['Test_Data'])",
+          "writable": true
+        }
+      ]
+    }
+  },
+  "inputs": {
+    "Model": {
+      "type": "File",
+      "inputBinding": {
+        "position": 2
+      }
+    },
+    "Test_Data": {
+      "type": "File",
+      "inputBinding": {
+        "position": 1
+      }
+    }
+  },
+  "outputs": {
+    "Testing_Results": {
+      "type": "File",
+      "outputBinding": {
+        "glob": "output.txt"
+      }
+    }
+  },
+  "arguments": [
+    {
+      "shellQuote": false,
+      "valueFrom": "ln -s /code/* ./\npython test.py"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "Workflow",
+  "inputs": {
+    "Test_Data": "File",
+    "Trained_Model": "File"
+  },
+  "outputs": {
+    "Testing_Results": {
+      "type": "File",
+      "outputSource": "Inference/Testing_Results"
+    }
+  },
+  "steps": {
+    "Inference": {
+      "run": "d2c58216-1812-2c98-bf32-e7a4519228d3_step.cwl.json",
+      "in": {
+        "Model": "Trained_Model",
+        "Test_Data": "Test_Data"
+      },
+      "out": [
+        "Testing_Results"
+      ]
+    }
+  },
+  "requirements": {
+    "InlineJavascriptRequirement": {},
+    "SubworkflowFeatureRequirement": {}
+  }
+}

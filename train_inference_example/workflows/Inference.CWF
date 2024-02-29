@@ -1,0 +1,202 @@
+{
+  "guid": "991f7f8f-083a-3692-52ee-55bb6fa61d97",
+  "attributes": {
+    "name": "Inference"
+  },
+  "registry": {
+    "position": {
+      "x": 376,
+      "y": 232
+    }
+  },
+  "steps": {
+    "M": {
+      "guid": "d2c58216-1812-2c98-bf32-e7a4519228d3",
+      "type": {
+        "guid": "5c01cb9d-4d8d-5721-4f1a-8ff630c35cde",
+        "name": "DockerImage"
+      },
+      "attributes": {
+        "command": "python RF.py",
+        "imageId": "robert666666/example1",
+        "workdir": "/code",
+        "name": "Inference"
+      },
+      "registry": {
+        "position": {
+          "x": 430,
+          "y": 358
+        }
+      },
+      "ports": {
+        "3": {
+          "guid": "bc142581-fb69-bfee-371e-e03fe4c3544e",
+          "type": {
+            "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+            "name": "FileInput"
+          },
+          "attributes": {
+            "position": 2,
+            "asArgument": true,
+            "name": "Model",
+            "location": ""
+          },
+          "registry": {
+            "position": {
+              "x": 266,
+              "y": 250
+            }
+          },
+          "source": null
+        },
+        "9": {
+          "guid": "18ce348f-1503-8f10-0bba-b98af596f28e",
+          "type": {
+            "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+            "name": "FileOutput"
+          },
+          "attributes": {
+            "name": "Testing_Results",
+            "pattern": "output.txt"
+          },
+          "registry": {
+            "position": {
+              "x": 441,
+              "y": 175
+            }
+          },
+          "source": null
+        },
+        "b": {
+          "guid": "400a728b-0ddc-cfc5-7b53-2d509f1db5e4",
+          "type": {
+            "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+            "name": "FileInput"
+          },
+          "attributes": {
+            "position": 1,
+            "asArgument": true,
+            "name": "Test_Data",
+            "location": ""
+          },
+          "registry": {
+            "position": {
+              "x": 256,
+              "y": 117
+            }
+          },
+          "source": null
+        }
+      }
+    }
+  },
+  "subs": {},
+  "ports": {
+    "w": {
+      "guid": "45bfd008-3996-3b83-7f1d-0f3f20871a7b",
+      "type": {
+        "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+        "name": "FileInput"
+      },
+      "attributes": {
+        "name": "Test_Data",
+        "asArgument": false,
+        "position": -1
+      },
+      "registry": {
+        "position": {
+          "x": 250,
+          "y": 318
+        }
+      },
+      "source": null
+    },
+    "x": {
+      "guid": "d3f0dc26-dc65-e66b-34e2-d6132e570bd6",
+      "type": {
+        "guid": "2bca78e9-2408-d478-9eb1-d2ecfc2abab8",
+        "name": "FileOutput"
+      },
+      "attributes": {
+        "name": "Testing_Results",
+        "pattern": ""
+      },
+      "registry": {
+        "position": {
+          "x": 670,
+          "y": 358
+        }
+      },
+      "source": null
+    },
+    "Y": {
+      "guid": "14370847-15b2-d94e-121a-1156cdb63bb4",
+      "type": {
+        "guid": "674357d8-0cd8-a278-accd-b4f0c225ffe5",
+        "name": "FileInput"
+      },
+      "attributes": {
+        "name": "Trained_Model",
+        "asArgument": false,
+        "position": -1
+      },
+      "registry": {
+        "position": {
+          "x": 250,
+          "y": 428
+        }
+      },
+      "source": null
+    }
+  },
+  "flows": {
+    "B": {
+      "guid": "c8f78dab-0976-2689-9984-7c1326974b81",
+      "type": {
+        "guid": "27e32b11-8c39-fac6-baad-ae01140827bc",
+        "name": "FlowFi2Fi"
+      },
+      "src": "/Y",
+      "dst": "/M/3",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 300,
+          "y": 485
+        }
+      }
+    },
+    "v": {
+      "guid": "7afdde0c-998d-ec94-da51-5751d6d0e406",
+      "type": {
+        "guid": "27e32b11-8c39-fac6-baad-ae01140827bc",
+        "name": "FlowFi2Fi"
+      },
+      "src": "/w",
+      "dst": "/M/b",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 290,
+          "y": 425
+        }
+      }
+    },
+    "L": {
+      "guid": "c1c88391-551c-d171-1265-1fcfc687131a",
+      "type": {
+        "guid": "f48be115-5970-17d5-79d7-4b326ca2a9a2",
+        "name": "FlowFo2Fo"
+      },
+      "src": "/M/9",
+      "dst": "/x",
+      "attributes": {},
+      "registry": {
+        "position": {
+          "x": 510,
+          "y": 450
+        }
+      }
+    }
+  }
+}

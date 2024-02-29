@@ -1,0 +1,45 @@
+{
+  "cwlVersion": "v1.1",
+  "class": "CommandLineTool",
+  "requirements": {
+    "NetworkAccess": {
+      "networkAccess": true
+    },
+    "InlineJavascriptRequirement": {},
+    "DockerRequirement": {
+      "dockerImageId": "train_test:latest"
+    },
+    "ShellCommandRequirement": {},
+    "InitialWorkDirRequirement": {
+      "listing": [
+        {
+          "entry": "$(inputs['s'])",
+          "writable": true
+        }
+      ]
+    }
+  },
+  "inputs": {
+    "s": "File"
+  },
+  "outputs": {
+    "training_result": {
+      "type": "File",
+      "outputBinding": {
+        "glob": "output.txt"
+      }
+    },
+    "model": {
+      "type": "File",
+      "outputBinding": {
+        "glob": "random_forest_model.joblib"
+      }
+    }
+  },
+  "arguments": [
+    {
+      "shellQuote": false,
+      "valueFrom": "ln -s /code/* ./\npython RF.py"
+    }
+  ]
+}
